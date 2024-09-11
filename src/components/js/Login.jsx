@@ -24,21 +24,22 @@ const Login = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        if (!validateForm()) return;
+        // if (!validateForm()) return;
 
-        try {
-            const response = await axios.post("http://localhost:5000/api/login", {
-                email,
-                password,
-            });
-            if (response.data.success) {
-                navigate("/dashboard");
-            } else {
-                setError("Invalid credentials");
-            }
-        } catch (error) {
-            setError("An error occurred during login");
-        }
+        // try {
+        //     const response = await axios.post("http://localhost:5000/api/login", {
+        //         email,
+        //         password,
+        //     });
+        //     if (response.data.success) {
+        //         navigate("/dashboard");
+        //     } else {
+        //         setError("Invalid credentials");
+        //     }
+        // } catch (error) {
+        //     setError("An error occurred during login");
+        // }
+        navigate("/dashboard")
     };
 
     return (
@@ -67,7 +68,7 @@ const Login = () => {
                     <label className="remember-me">
                         <input type="checkbox" /> Remember me
                     </label>
-                    <button type="submit" className="login-btn">
+                    <button type="submit" className="login-btn" >
                         Login
                     </button>
                 </form>

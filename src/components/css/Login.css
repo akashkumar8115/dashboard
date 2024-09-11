@@ -13,13 +13,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s") no-repeat center center/cover;
+    background: linear-gradient(to bottom, #ff7e5f, #fbd2b3);
+    /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s") no-repeat center center/cover; */
     padding: 20px;
 }
 
 .login-card {
     background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(16px);
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -32,6 +33,7 @@ body {
     font-size: 24px;
     margin-bottom: 10px;
     text-align: center;
+    color: black;
 }
 
 .login-card p {
