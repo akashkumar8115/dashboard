@@ -1,0 +1,40 @@
+.crew-availability-container {
+    padding: 20px;
+    background-color: #eef2f7;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.crew-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.crew-card {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.crew-card h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.crew-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .crew-card {
+        font-size: 16px;
+    }
+}

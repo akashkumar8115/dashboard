@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s") no-repeat center center/cover;
+    padding: 20px;
+}
+
+.login-card {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    width: 100%;
+    animation: fadeIn 0.8s ease;
+}
+
+.login-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.login-card p {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    animation: slideUp 0.6s ease-in-out;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    outline: none;
+}
+
+.input-wrapper input:focus {
+    border-color: #007bff;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+}
+
+#error-message {
+    color: red;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.signup-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .login-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 10px;
+    }
+
+    .login-card h2 {
+        font-size: 20px;
+    }
+
+    .input-wrapper input {
+        padding: 10px;
+    }
+}

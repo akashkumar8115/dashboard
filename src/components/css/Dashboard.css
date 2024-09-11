@@ -1,0 +1,113 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f7f9fc;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.status-cards {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.card {
+    width: 20%;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card h3 {
+    /* position: absolute; */
+    text-align: center;
+    top: 25%;
+    left: 25%;
+    font-size: 14px;
+    color: #000000;
+}
+
+.pending-cards {
+    /* position: relative; */
+}
+.pending-cards img,
+.accepted-cards img
+{
+ height: 5rem;
+ /* width: 2rem; */
+}
+.accepted-card {
+    background-color: #d4edda;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.action-link {
+    width: 40%;
+    padding: 15px;
+    text-align: center;
+    background-color: #007bff;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.action-link:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.action-link h3 {
+    font-size: 18px;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    .status-cards{
+        /* margin: auto; */
+        gap: 1rem;
+    }
+
+    .card,
+    .action-link {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+.pending-card h3{
+    /* height: 2rem;
+    width: 2rem;
+    color: black;
+    background-image: url("../imges/folder02.png"); */
+}
+
+}
