@@ -1,137 +1,127 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f7;
+}
+
 .dashboard-container {
-    display: flex;
-
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #f7f9fc;
-    /* padding: 20px; */
-    gap: 1rem;
-
-}
-
-h3 {
-    /* font-size: 28px; */
-    color: #ffffff;
-    text-align: center;
-    align-items: center;
-}
-
-.status-cards {
-    display: flex;
-    justify-content: space-around;
     width: 100%;
-    margin-bottom: 40px;
-}
-
-.card {
-    width: 20%;
-    padding: 20px;
-    text-align: center;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    cursor: pointer;
+    max-width: 400px;
     margin: auto;
-    margin-bottom: 1rem;
-}
-
-.card,
-.action-link {
-    gap: 1rem;
-}
-
-.card h3 {
-    /* position: absolute; */
-    text-align: center;
-    top: 25%;
-    left: 25%;
-    font-size: 14px;
-    color: #000000;
-}
-
-.pending-cards {
-    /* position: relative; */
-}
-
-
-.accepted-card {
-    background-color: #d4edda;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.actions {
-    /* display: flex; */
-    justify-content: space-around;
-    width: 50%;
-    gap: 1rem;
-
-}
-
-.action-link {
-    width: 40%;
-    margin: auto;
-    margin-top: 1rem;
     padding: 15px;
-    text-align: center;
-    background-color: #007bff;
-    border-radius: 8px;
+    background-color: #333;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.action-link:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-.action-link h3 {
-    font-size: 18px;
-}
-
-
-
-@media (max-width: 768px) {
-    .pro img {
-height: 3rem;
-    }
-    .actions {
-        /* flex-direction: column;
-        align-items: center; */
-        display: block;
-        width: 100%;
-        color: white;
-    }
-
-    .status-cards {
-        /* margin: auto; */
-        gap: 1rem;
-    }
-
-    .card,
-    .action-link {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-    .pending-cards ,.accepted-cards{
-        width: 40%;
-    }
-
-}
-
-.pending-cards ,.accepted-cards{
+/* Header */
+.dashboard-header {
     display: flex;
-    flex-direction: column;
-    background-color: white;
-    color: black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
-.pro img {
-    /* height: 5rem;
-    width: 5rem; */
+
+.dashboard-header h1 {
+    font-size: 24px;
+}
+
+.icon-bell,
+.icon-profile {
+    background-color: #555;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+svg{
+    margin: auto;
+}
+/* Dashboard Menu */
+.dashboard-menu {
+    margin: 20px 0;
+}
+
+.dashboard-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #444;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.item-icon {
+    width: 40px;
+    height: 40px;
+    /* background-color: #666; */
+    border-radius: 50%;
+}
+.item-text{
+    text-align: start;
+}
+.item-text p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.item-text span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Footer */
+.dashboard-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #222;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.footer-btn {
+    background-color: #666;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.footer-btn.active {
+    background-color: #00aaff;
+}
+
+.footer-btn:hover {
+    background-color: #0077cc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .dashboard-item {
+        /* flex-direction: column; */
+        align-items: flex-start;
+    }
+
+    .dashboard-header h1 {
+        font-size: 20px;
+    }
+
+    .footer-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
 }
